@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+
+<html ng-app="Profile">
+
+<head>
+    <title> User Profile </title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script type="text/javascript" src="ng-edit.js"></script>
+    <link href="ng-edit.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body ng-controller="ctrlFunction as alpha">
+    <h1 class="username"> Ernest Joseph "Trey" Anastasio III </h1>
+   
+    <a class ="profile-img" href="http://www.phish.com/">
+        <img src="http://rol.st/29xHtFp">
+    </a>
+    
+    <div class = "profile">
+        <div class="border">
+        <p class="work-info" ng-click="alpha.triggerWorkInput()" ng-hide="alpha.hideWork"> {{alpha.work}}</p>
+        <input type="text" ng-show="alpha.hideWork" ng-model="alpha.work" ng-blur="alpha.triggerWorkInput()" >
+        </div>
+        
+        <div class="border">   
+        <p class="birthday" ng-click="alpha.triggerBirthdayInput()" ng-hide="alpha.hideBirthday"> {{alpha.birthday}} </p>
+        <input type="text" ng-show="alpha.hideBirthday" ng-model="alpha.birthday" ng-blur="alpha.triggerBirthdayInput()" > 
+        </div>
+        
+        <div class="border">
+        <p class="location" ng-click="alpha.triggerLocationInput()" ng-hide="alpha.hideLocation">{{alpha.locations}}</p>
+        <input type="text" ng-show="alpha.hideLocation" ng-model="alpha.locations" ng-blur="alpha.triggerLocationInput()">
+        </div>
+    </div>  
+  
+  <div>
+      <h3 class=""></h3>
+  </div>
+</body>
+
+ <!--<input type="text" ng-show="hideNameText" -->
+ <!--class="input-h1" ng-blur="triggerNameInput()" ng-model="profile.name"/>-->
+ 
+<!-- <h1 ng-hide="hideNameText" ng-click="triggerNameInput()">{{profile.name}}</h1>-->
+<!--<input type="text" ng-show="hideNameText" class="input-h1" ng-blur="triggerNameInput()"ng-model="profile.name"/>-->

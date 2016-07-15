@@ -1,0 +1,33 @@
+input {
+    display: block;
+    width: 150px;
+    height: 75px;
+    text-align: center;
+}
+
+p {
+    display: block;
+    color: #DACFFF;
+}
+
+img {
+    top: 50%;
+    bottom: 50%;
+}
+html {
+    background-color: #2868C7;
+}
+
+.border {
+    padding: 10px;
+    width: 150px;
+    height: 75px;
+    
+}
+
+p {
+    text-align: center;
+    padding: 5%;
+}
+
+

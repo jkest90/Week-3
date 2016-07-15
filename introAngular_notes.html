@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="Zordon">
+<head>
+    <title>Angular Intro</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script type="text/javascript" src="introAngular_notes.js"></script>
+</head>
+
+<!--<body ng-controller="alpha" ng-init="rangers=['Red Ranger', 'Blue Ranger', 'White Ranger', 'Green Ranger']"> <!--adds controller 'alpha', and an array of rangers  
+    
+        <h1> !!! ------- {{greeting}} ------- !!!</h1> 
+        <h3 ng-bind="subGreeting"></h3>
+        <button ng-click="fightPutty()"> Fight Putty </button>  fightPutty function
+        <p> {{ rangers[0] }} </p>  <!--Accesses the Rangers array at the first index. Prints out the first element, or 'Red Ranger' within this paragraph tag -->
+
+<body> <!--adds controller 'alpha', and an array of rangers-->  
+   
+    <div ng-controller="alpha" ng-init="rangers=['Red Ranger', 'Blue Ranger', 'White Ranger', 'Green Ranger']"> <!--Rangers is ONLY in the scope of this contorller 'alpha' -->
+        <h1> !!! ------- {{greeting}} ------- !!!</h1> 
+        <h3 ng-bind="subGreeting"></h3>
+        <button ng-click="fightPutty()"> Fight Putty </button>  <!--fightPutty function-->
+        <p> {{ rangers[0] }} </p>  <!--Accesses the Rangers array at the first index. Prints out the first element, or 'Red Ranger' within this paragraph tag -->
+     </div> 
+     
+     <div ng-controller ="betaCtrl as beta"> <!--creates a new controller using "controller as" syntax -->
+        <p> {{ beta.beans }} </p>
+        <input type="text" placeholder="Favorite Beans" ng-model ="beta.FavoriteBeans" />
+        <button ng-click="beta.addBeans()">Add Beans</button>
+        <!-- Try to keep using ng-repeat on arrays -->
+        <p ng-repeat="beans in beta.myBeans">
+            {{ beans }}
+        </p>
+     </div>
+     
+</body>
+
+
+</html>

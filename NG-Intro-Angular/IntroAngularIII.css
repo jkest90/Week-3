@@ -1,0 +1,29 @@
+
+body, html {
+  position: relative;
+  height: 100%;
+
+}
+button {
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+  top: 50%s;
+  left: 50%;
+  
+  margin-bottom: 25px;
+}
+
+.popup {
+    position: fixed;
+    height: 50px;
+    background-color: pink;
+    top: 50vh;
+    left: 50vw;
+    transition: opacity 2s;
+}
+
+.buttonDiv {
+  transform: translate(-50%, -50%);
+  position: absolute;
+}

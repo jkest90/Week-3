@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html ng-app="PokeApp">
+<head>
+    <title>NgRepeat</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script type="text/javascript" src="ngRepeat_notes.js"></script>
+</head>
+
+<body ng-controller="PallettTown as pCtrl">   <!--'pCtrl' is an arbitrary name. References object pCtrl-->
+    <h1>{{ pCtrl.welcomeMessage }} </h1>      <!-- in c-as syntax,we must be explicit about which
+                                                   object we're referencing welcomeMessage from -->
+    <ul>
+        <li ng-repeat="pokemon in pCtrl.pokemon"> {{ pokemon }}</li>  <!-- similar to a for loop. list[i]. we now have access to something 
+                                                            pokemon thats in the <li ng-repeat> -->
+    </ul>
+    
+    <div ng-repeat="(jigKey, jigVal) in pCtrl.jigglyPuff"> <!--repeating over an object jigglyPuff (KEY, VALUE-->
+        <h3>{{jigKey}} - {{$index}}</h3>
+        <h5>{{jigVal}}</h5>
+        <hr>
+    </div>
+</body>
+</html>

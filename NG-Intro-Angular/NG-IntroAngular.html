@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html ng-app="angularIntro">
+
+<head>
+    <title> Intro to Angular Assignment</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script type="text/javascript" src="NG-IntroAngular.js"></script>
+
+</head>
+    
+<body>
+                                                                      <!-- Part 1 -->
+  <div ng-controller="alpha">                                         
+    <h1> {{ greeting }}</h1>
+    <button ng-click="buttonClick()">And muttered underneath his breath: </button>
+    <h3> {{ subGreeting }} </h3>
+  </div>
+                                                                      <!-- Part 2 -->         
+                                                                      
+  <div ng-controller="betaCtrl as beta">           <!--'betaCtrl' is name of controller + 'as' -->
+    <h1>The Ballad of Frankie Lee... {{beta.exclaim}}  </h1>      <!-- + 'beta' object('this' function betaCtrl)' -->
+    <h3>& Judas Priest {{beta.exclaim}}</h3>
+    <h5>"...they were the best of friends" {{beta.exclaim}}</h5>
+           
+    <p ng-mouseover="beta.hover()" ng-style ="beta.paragraphColor" >  {{beta.pOne}}</p>
+    <p>
+        <a href="http://www.bobdylan.com" ng-click="beta.confirm()">Bob Dylan</a>
+        <br><a href="http://www.jerrygarcia.com">"Been All around this World"</a><br>
+    </p>
+        
+  </div>
+
+</body>
+    
+</html>
+
