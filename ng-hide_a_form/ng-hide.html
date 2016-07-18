@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html ng-app="Profile">
+
+<head>
+    <title> User Profile </title>
+    <!--loading bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ng-hide.css">
+    <!-- loading angular CDN-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <!--loading bootstrap and jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--loading angular app file -->
+    <script type="text/javascript" src="ng-hide.js"></script>
+</head>
+
+<body ng-controller="UserCtrl as alpha">
+
+    <form class="form-input" ng-show="alpha.toggleHide" ng-submit="alpha.submitInput()">
+        <h5> Name </h5>
+        <input type ="text" ng-model="alpha.newInput[0]">
+        <h5>Biography</h5>
+        <input type="text" ng-model="alpha.newInput[1]">
+        <h5>Favorite Books</h5>
+        <input type="text" ng-model="alpha.newInput[2]">
+        <h5>Favorite JS Libray</h5>
+        <input type="text" ng-model="alpha.newInput[3]">
+        <br />
+        <button id="submitForm">Submit</button>
+        <!-- this function makes alpha.input[0-4] = alpha.newInput[0-4] -->
+    </form>
+
+    <div class="form-entry" ng-show="!alpha.toggleHide"> <!--the form will show because !toggleHide -->
+      <div class="user-image">
+      <a class ="profile-img" href="http://www.facebook.com/">
+          <img src="http://bit.ly/29P24r5"/> </a>
+      </div>
+      <h5> Name </h5>
+        <p>{{alpha.input[0]}}</p>
+      <h5> Biography </h5>
+        <p>{{alpha.input[1]}}</p>
+      <h5> Favorite Books</h5>
+        <p>{{alpha.input[2]}}</p>
+      <h5> Favorite JS Library</h5>
+        <p>{{alpha.input[3]}}</p>
+      <br />
+      <button class="loadButton" ng-click="alpha.loadForm()" ng-hide="toggleHide"> Submit Form </button>
+    </div>
+
+
+</body>
+
+</html>
+<!-- Create all the HTML for your form and profile page. The form should appear on top and the user's profile should appear below. Include separate fields for the following:
+name
+bio
+favorite books
+favorite Javascript libraries
+Add a submit handler to the form element. On submit, update the text of user's profile below.
+Change the CSS so that the form is hidden when the page loads.
+Add a 'Show Form' button which, when clicked, makes the form visible for the user to edit. (Try some directives like ng-show or ng-class. Which method is easier?)
+When the form is hidden, the button should say 'Show Form'. When the form is shown, the button should say 'Hide Form' and perform the appropriate action. -->
